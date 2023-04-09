@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.co.kr.domain.BoardFileDomain;
 import com.co.kr.domain.BoardListDomain;
+import com.co.kr.mapper.UploadMapper;
 import com.co.kr.service.UploadService;
 import com.co.kr.vo.fileListVO;
 

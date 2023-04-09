@@ -197,4 +197,15 @@ public class UploadServiceImple implements UploadService{
 		// TODO Auto-generated method stub
 		uploadMapper.bdFileRemove(boardFileDomain);
 	}
+	
+	//하나만 가져오기
+	@Override
+	public BoardListDomain boardSelectOne(HashMap<String, Object> map) {
+		return uploadMapper.boarSelectOne(map);
+	}
+	
+	//하나 게시글 파일만 가져오기
+	public List<BoardFileDomain> boardSelectOneFile(HashMap<String, Object> map){
+		return uploadMapper.boardSelectOneFile(map);
+	}
 }

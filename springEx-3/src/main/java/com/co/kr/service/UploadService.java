@@ -24,7 +24,9 @@ public interface UploadService {
 	//하나 삭제
 	public void bdFileRemove(BoardFileDomain boardFileDomain);
 
+	//하나 리스트 조회
 	public BoardListDomain boardSelectOne(HashMap<String, Object> map);
-
+	
+	//하나 파일 리스트 조회
 	public List<BoardFileDomain> boardSelectOneFile(HashMap<String, Object> map);
 }
