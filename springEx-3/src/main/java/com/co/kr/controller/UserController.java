@@ -52,7 +52,7 @@ public class UserController {
 		LoginDomain loginDomain = userService.mbGetId(map);
 		
 		if(dupleCheck == 0) {
-			String alertText = "없는 아이디이거나 패스워드가 잘못괴었습니다.";
+			String alertText = "없는 아이디이거나 패스워드가 잘못되었습니다.";
 			String redirectPath = "/main/signin";
 			CommonUtils.redirect(alertText, redirectPath, response);
 			return mav;

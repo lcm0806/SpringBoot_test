@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -17,11 +17,11 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th>±Û¹øÈ£</th>
-                    <th>Á¦¸ñ</th>
-                    <th>¾ÆÀÌµð</th>
-                    <th>µî·ÏÀÏ</th>
-                    <th>¼öÁ¤ÀÏ</th>
+                    <th>ê¸€ë²ˆí˜¸</th>
+                    <th>ì œëª©</th>
+                    <th>ì•„ì´ë””</th>
+                    <th>ë“±ë¡ì¼</th>
+                    <th>ìˆ˜ì •ì¼</th>
                 </tr>
             </thead>
             
@@ -40,8 +40,8 @@
     <th:block th:if="${detail}">   
         <h1 style="padding: 30px 0;" th:text="${detail.bdTitle}"></h1>
         <div style="text-align: right;">
-            <span style="color: #00a2be;">±Û¹øÈ£ </span> <span th:text="${detail.bdSeq}"></span> <span style="color: #00a2be"> | </span>
-            <span style="color: #00a2be">±Û¾´ÀÌ </span> <span th:text="${detail.mbId}"></span> <span style="color: #00a2be"> | </span> 
+            <span style="color: #00a2be;">ê¸€ë²ˆí˜¸ </span> <span th:text="${detail.bdSeq}"></span> <span style="color: #00a2be"> | </span>
+            <span style="color: #00a2be">ê¸€ì“´ì´ </span> <span th:text="${detail.mbId}"></span> <span style="color: #00a2be"> | </span> 
             <span th:text="${detail.bdCreateAt}"></span> <span style="color: #00a2be"> | </span> 
             <span th:text="${detail.bdUpdateAt}"></span> 
         </div>
@@ -49,14 +49,16 @@
         <div>
             <p style="padding: 30px 0;" th:text="${detail.bdContent}"></p>
             <ul th:if="${files}"  th:each="file : ${files}" style="display: inline-block;margin-bottom: 5px;">
-                <li> <img id="imgId" th:src="@{${file.upNewFileName}}" alt="Ã·ºÎÀÌ¹ÌÁö" height="280" /></li>
+                <li> <img id="imgId" th:src="@{${file.upNewFileName}}" alt="ì²¨ë¶€ì´ë¯¸ì§€" height="280" /></li>
             </ul>
         </div>
 
         <div style="padding: 30px 0; text-align:right;">
-		        <a th:href="@{/edit(bdSeq = ${detail.bdSeq})}"><button>¼öÁ¤</button></a>
-            <a th:href="@{/remove(bdSeq = ${detail.bdSeq})}"><button>»èÁ¦</button></a>
-            <a th:href="@{bdList}"><button style="background-color: #00a2be; color: white; margin-left: 20px">¸ñ·ÏÀ¸·Î</button></a>
+			<th:block th:if="${detail.mbId == session.id}">
+    			<a th:href="@{/edit(bdSeq = ${detail.bdSeq})}"><button>ìˆ˜ì •</button></a>
+    			<a th:href="@{/remove(bdSeq = ${detail.bdSeq})}"><button>ì‚­ì œ</button></a>
+			</th:block>
+            <a th:href="@{bdList}"><button style="background-color: #00a2be; color: white; margin-left: 20px">ëª©ë¡ìœ¼ë¡œ</button></a>
         </div>
         
     </th:block>

@@ -30,7 +30,7 @@ public interface UploadMapper {
 	public void bdFileRemove(BoardFileDomain boardFileDomain);
 	
 	//select one
-	public BoardListDomain boarSelectOne(HashMap<String, Object> map);
+	public BoardListDomain boardSelectOne(HashMap<String, Object> map);
 	
 	//select one file
 	public List<BoardFileDomain> boardSelectOneFile(HashMap<String, Object> map);

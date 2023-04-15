@@ -201,7 +201,7 @@ public class UploadServiceImple implements UploadService{
 	//하나만 가져오기
 	@Override
 	public BoardListDomain boardSelectOne(HashMap<String, Object> map) {
-		return uploadMapper.boarSelectOne(map);
+		return uploadMapper.boardSelectOne(map);
 	}
 	
 	//하나 게시글 파일만 가져오기
