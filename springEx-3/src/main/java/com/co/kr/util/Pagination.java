@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ public class Pagination {
 	public static Map<String, Object> pagination(int totalcount,HttpServletRequest request){
 		Map<String, Object> map = new HashMap<String,Object>();
 		//페이지 넘버 초기화
+		HttpSession session = request.getSession();
 		String pnum = request.getParameter("page");
 		System.out.println("punm"+pnum);
 		if(pnum == null) {pnum = "1";}
