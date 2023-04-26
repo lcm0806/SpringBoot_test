@@ -14,6 +14,8 @@ import com.co.kr.vo.fileListVO;
 
 public interface UploadService {
 	public List<BoardListDomain> boardList();
+	
+	public List<BoardListDomain> taticsboardList();
 
 	//인서트 및 업데이트
 	public int fileProcess(fileListVO fileListVO, MultipartHttpServletRequest request, HttpServletRequest httpReq);
@@ -29,4 +31,5 @@ public interface UploadService {
 	
 	//하나 파일 리스트 조회
 	public List<BoardFileDomain> boardSelectOneFile(HashMap<String, Object> map);
+
 }

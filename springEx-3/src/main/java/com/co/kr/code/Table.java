@@ -3,8 +3,9 @@ package com.co.kr.code;
 public enum Table {
 	MEMBER("member"),
 	FILES("files"),
-	BOARD("board");
-	
+	BOARD("board"),
+	TATICSBOARD("taticsboard"),
+	TATICSFILES("taticsfiles");
 	private String table;
 	
 	Table(String table) {

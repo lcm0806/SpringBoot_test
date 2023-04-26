@@ -96,6 +96,18 @@ public class UserController {
 		return mav;
 	}
 	
+	//과제 축구전술 메뉴 클릭시 보이기
+	@RequestMapping(value = "taticsbdtList")
+	public ModelAndView taticsbdtList() {
+		ModelAndView mav = new ModelAndView();
+		List<BoardListDomain> items = uploadService.taticsboardList();
+		System.out.println("items ==>" + items);
+		mav.addObject("items",items);
+		mav.setViewName("taticsboard/taticsboardList.html");
+		return mav;
+		
+	}
+	
 	//대시보드 리스트 보여주기
 	@GetMapping("mbList")
 	public ModelAndView mbList(HttpServletRequest request) {

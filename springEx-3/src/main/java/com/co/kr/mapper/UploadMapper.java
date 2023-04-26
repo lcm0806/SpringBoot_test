@@ -14,6 +14,9 @@ public interface UploadMapper {
 	//list
 	public List<BoardListDomain> boardList();
 	
+	//taticslist
+	public List<BoardListDomain> taticsboardList();
+	
 	//content insert
 	public void contentUpload(BoardContentDomain boardContentDomain);
 	//file insert

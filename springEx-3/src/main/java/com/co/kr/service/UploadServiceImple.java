@@ -43,6 +43,7 @@ public class UploadServiceImple implements UploadService{
 	public List<BoardListDomain> boardList(){
 		return uploadMapper.boardList();
 	}
+	
 
 	@Override
 	public int fileProcess(fileListVO fileListVO, MultipartHttpServletRequest request, HttpServletRequest httpReq) {
@@ -208,4 +209,13 @@ public class UploadServiceImple implements UploadService{
 	public List<BoardFileDomain> boardSelectOneFile(HashMap<String, Object> map){
 		return uploadMapper.boardSelectOneFile(map);
 	}
+
+
+	@Override
+	public List<BoardListDomain> taticsboardList() {
+		// TODO Auto-generated method stub
+		return uploadMapper.taticsboardList();
+	}
+
+	
 }
